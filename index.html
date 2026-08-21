@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0F172A">
+  <title>Ferragens Santa Rita | Home Center & Materiais de Construção</title>
+  <meta name="description" content="Tudo para sua obra ou reforma no melhor Home Center da região: ferragens, ferramentas, materiais elétricos, hidráulicos, tintas, portas e telhas com entrega rápida e condições facilitadas.">
+  <meta name="keywords" content="home center, ferragens, ferramentas, material eletrico, hidraulica, tintas coral, lorenzetti, portas, escadas de aluminio, materiais de construcao">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Ferragens Santa Rita | Home Center & Materiais de Construção">
+  <meta property="og:description" content="Tudo para sua obra em um só lugar com preço justo, marcas líderes e entrega expressa.">
+  <meta property="og:locale" content="pt_BR">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<!-- ================= SPRITE DE ÍCONES ================= -->
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true">
+  <symbol id="ic-nut" viewBox="0 0 24 24"><path d="M12 2 3.5 7v10L12 22l8.5-5V7L12 2Zm0 5.2A4.8 4.8 0 1 1 7.2 12 4.8 4.8 0 0 1 12 7.2Z" fill="currentColor"/></symbol>
+  <symbol id="ic-wrench" viewBox="0 0 24 24"><path d="M21.3 5.5 18 8.8l-2.8-2.8 3.3-3.3a6 6 0 0 0-7.7 7.3l-8 8a2.2 2.2 0 0 0 3.1 3.1l8-8a6 6 0 0 0 7.4-7.6Z" fill="currentColor"/></symbol>
+  <symbol id="ic-bolt" viewBox="0 0 24 24"><path d="M13.5 2 4 13.5h6L9.5 22 20 10.5h-6.6L13.5 2Z" fill="currentColor"/></symbol>
+  <symbol id="ic-tap" viewBox="0 0 24 24"><path d="M11 3v2H7a4 4 0 0 0-4 4v3h2V9a2 2 0 0 1 2-2h4v2h2V3h-2Zm2 6v3h-2v9h2v-4h3a4 4 0 0 1 4 4h2a6 6 0 0 0-6-6h-3V9h-2Z" fill="currentColor"/></symbol>
+  <symbol id="ic-roller" viewBox="0 0 24 24"><path d="M3 4h13v5H3V4Zm15 1h3v6h-8v2h1a2 2 0 0 1 2 2v6h-6v-6a2 2 0 0 1 2-2h1v-4h8V7h-3V5Z" fill="currentColor"/></symbol>
+  <symbol id="ic-door" viewBox="0 0 24 24"><path d="M5 2h14v20H5V2Zm2 2v16h10V4H7Zm8 7a1.2 1.2 0 1 1-1.2 1.2A1.2 1.2 0 0 1 15 11Z" fill="currentColor"/></symbol>
+  <symbol id="ic-ladder" viewBox="0 0 24 24"><path d="M6 2h2v20H6V2Zm10 0h2v20h-2V2ZM8 5h8v2H8V5Zm0 4h8v2H8V9Zm0 4h8v2H8v-2Zm0 4h8v2H8v-2Z" fill="currentColor"/></symbol>
+  <symbol id="ic-pump" viewBox="0 0 24 24"><path d="M12 4a6 6 0 1 0 6 6 6 6 0 0 0-6-6Zm0 3a3 3 0 1 1-3 3 3 3 0 0 1 3-3ZM3 18h18v3H3v-3Zm16-13h3v3h-3V5Z" fill="currentColor"/></symbol>
+  <symbol id="ic-shower" viewBox="0 0 24 24"><path d="M12 2a5 5 0 0 0-5 5H3l3.5 5h11L21 7h-4a5 5 0 0 0-5-5Zm-4 13a1 1 0 1 1-1 1 1 1 0 0 1 1-1Zm4 0a1 1 0 1 1-1 1 1 1 0 0 1 1-1Zm4 0a1 1 0 1 1-1 1 1 1 0 0 1 1-1Zm-6 4a1 1 0 1 1-1 1 1 1 0 0 1 1-1Zm4 0a1 1 0 1 1-1 1 1 1 0 0 1 1-1Z" fill="currentColor"/></symbol>
+  <symbol id="ic-toilet" viewBox="0 0 24 24"><path d="M7 2h9v6H7V2ZM5 10h14v3a7 7 0 0 1-4 6.3V22H9v-2.7A7 7 0 0 1 5 13v-3Z" fill="currentColor"/></symbol>
+  <symbol id="ic-sheet" viewBox="0 0 24 24"><path d="M2 7h20v3H2V7Zm0 5h20v3H2v-3Zm0 5h20v3H2v-3Z" fill="currentColor"/></symbol>
+  <symbol id="ic-bulb" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-4 12.7V17h8v-2.3A7 7 0 0 0 12 2ZM9 18h6v2H9v-2Zm1 3h4v1h-4v-1Z" fill="currentColor"/></symbol>
+  <symbol id="ic-paint" viewBox="0 0 24 24"><path d="M5 3h14v4H5V3Zm-1 6h16v12H4V9Zm4 3v6h8v-6H8Z" fill="currentColor"/></symbol>
+  <symbol id="ic-whats" viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.3A10 10 0 1 0 12 2Zm5.5 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-1.7-.1a12 12 0 0 1-6.2-5.4c-.5-.8-.8-1.7-.8-2.5a3 3 0 0 1 .9-2.2c.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2 0 .4-.1.6l-.4.5c-.1.2-.3.3-.1.6a8.6 8.6 0 0 0 4 3.4c.3.1.5.1.7-.1l.8-1c.2-.2.3-.2.6-.1l2 1c.3.1.5.2.5.4a2 2 0 0 1-.1 1Z" fill="currentColor"/></symbol>
+  <symbol id="ic-pin" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 14.5 9 2.5 2.5 0 0 1 12 11.5Z" fill="currentColor"/></symbol>
+  <symbol id="ic-clock" viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2Zm1 10.6-4.3 2.5-1-1.7 3.3-1.9V6h2v6.6Z" fill="currentColor"/></symbol>
+  <symbol id="ic-phone" viewBox="0 0 24 24"><path d="M6.6 3h3l1.6 4-2 1.5a12 12 0 0 0 5.3 5.3l1.5-2 4 1.6v3A2.6 2.6 0 0 1 17.4 19 15 15 0 0 1 5 6.6 2.6 2.6 0 0 1 6.6 3Z" fill="currentColor"/></symbol>
+  <symbol id="ic-truck" viewBox="0 0 24 24"><path d="M2 5h12v10H2V5Zm13 3h4l3 4v3h-7V8ZM6.5 16a2 2 0 1 1-2 2 2 2 0 0 1 2-2Zm11 0a2 2 0 1 1-2 2 2 2 0 0 1 2-2Z" fill="currentColor"/></symbol>
+  <symbol id="ic-badge" viewBox="0 0 24 24"><path d="m12 2 2.6 1.9 3.2-.2.9 3.1 2.6 1.9-1.4 2.9 1.4 2.9-2.6 1.9-.9 3.1-3.2-.2L12 22l-2.6-1.9-3.2.2-.9-3.1-2.6-1.9 1.4-2.9-1.4-2.9 2.6-1.9.9-3.1 3.2.2Zm-1 12.9 5-5-1.4-1.4-3.6 3.5-1.6-1.6L8 12.9Z" fill="currentColor"/></symbol>
+  <symbol id="ic-tag" viewBox="0 0 24 24"><path d="M11 2H2v9l11 11 9-9L11 2Zm-4 6a1.7 1.7 0 1 1 1.7-1.7A1.7 1.7 0 0 1 7 8Z" fill="currentColor"/></symbol>
+  <symbol id="ic-cart" viewBox="0 0 24 24"><path d="M2 3h3l3 11h9l3-8H7M9 20a1.5 1.5 0 1 0 1.5 1.5A1.5 1.5 0 0 0 9 20Zm8 0a1.5 1.5 0 1 0 1.5 1.5A1.5 1.5 0 0 0 17 20Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/></symbol>
+  <symbol id="ic-search" viewBox="0 0 24 24"><path d="M11 4a7 7 0 1 0 4.2 12.6l4.1 4.1 1.4-1.4-4.1-4.1A7 7 0 0 0 11 4Zm0 2a5 5 0 1 1-5 5 5 5 0 0 1 5-5Z" fill="currentColor"/></symbol>
+  <symbol id="ic-close" viewBox="0 0 24 24"><path d="M18.3 5.7 12 12l6.3 6.3-1.4 1.4L10.6 13.4 5.7 18.3 4.3 16.9 10.6 10.6 4.3 4.3 5.7 2.9 12 9.2l4.9-4.9Z" fill="currentColor"/></symbol>
+  <symbol id="ic-arrow" viewBox="0 0 24 24"><path d="M4 11h12.2l-4.6-4.6L13 5l7 7-7 7-1.4-1.4 4.6-4.6H4v-2Z" fill="currentColor"/></symbol>
+  <symbol id="ic-check" viewBox="0 0 24 24"><path d="M9.6 16.6 5 12l1.4-1.4 3.2 3.2 8-8L19 7.2Z" fill="currentColor"/></symbol>
+  <symbol id="ic-card" viewBox="0 0 24 24"><path d="M20 4H4c-1.11 0-1.99.89-1.99 2L2 18c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V6c0-1.11-.89-2-2-2zm0 14H4v-6h16v6zm0-10H4V6h16v2z" fill="currentColor"/></symbol>
+  <symbol id="ic-shield" viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z" fill="currentColor"/></symbol>
+  <symbol id="ic-menu" viewBox="0 0 24 24"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" fill="currentColor"/></symbol>
+</svg>
+
+<a class="skip-link" href="#produtos">Pular para as ofertas</a>
+
+<!-- ================= TOPBAR (AVISOS & SUPORTE) ================= -->
+<div class="topbar">
+  <div class="container topbar__in">
+    <div class="topbar__ticker">
+      <span class="topbar__item"><svg class="ic"><use href="#ic-truck"/></svg> <strong>Entrega Expressa</strong> na sua obra</span>
+      <span class="topbar__item"><svg class="ic"><use href="#ic-card"/></svg> <strong>Até 10x sem juros</strong> no cartão</span>
+      <span class="topbar__item"><svg class="ic"><use href="#ic-badge"/></svg> <strong>Preço de Atacado</strong> no Varejo</span>
+    </div>
+    <div class="topbar__links">
+      <a class="topbar__link" href="#contato">
+        <span class="ic-status"></span> Atendimento Online
+      </a>
+      <a class="topbar__link" href="#" data-wa="Olá! Vim pelo site da Ferragens Santa Rita e gostaria de atendimento.">
+        <svg class="ic" style="color:var(--wa);"><use href="#ic-whats"/></svg> <span data-phone-display>(00) 00000-0000</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- ================= HEADER PRINCIPAL (PADRÃO CACIQUE HOME CENTER) ================= -->
+<header class="header" id="header">
+  <div class="container header__in">
+    <!-- Logo Institucional -->
+    <a class="brand" href="#topo" aria-label="Ferragens Santa Rita — Página Inicial">
+      <div class="brand__symbol">
+        <svg viewBox="0 0 120 120" fill="none">
+          <path d="M60 6 108 33v54L60 114 12 87V33Z" stroke="#0F172A" stroke-width="10" stroke-linejoin="round"/>
+          <text x="60" y="78" text-anchor="middle" font-family="Anton, Impact, sans-serif" font-size="44" font-weight="900" fill="#0F172A">FSR</text>
+        </svg>
+      </div>
+      <div class="brand__text">
+        <span class="brand__name">SANTA <span>RITA</span></span>
+        <span class="brand__sub">HOME CENTER</span>
+      </div>
+    </a>
+
+    <!-- Mega Barra de Busca por Departamento -->
+    <div class="search-bar" id="searchBar">
+      <div class="search-bar__select-wrap">
+        <select class="search-bar__select" id="searchCategory" aria-label="Selecionar categoria de busca">
+          <option value="all">Todos os Departamentos</option>
+          <option value="Ferragens">Ferragens em Geral</option>
+          <option value="Ferramentas">Ferramentas & Máquinas</option>
+          <option value="Elétricos">Material Elétrico</option>
+          <option value="Hidráulicos">Hidráulica & Bombas</option>
+          <option value="Tintas">Tintas & Acabamento</option>
+          <option value="Portas & Telhas">Portas & Telhas</option>
+        </select>
+      </div>
+      <input type="search" class="search-bar__input" id="searchInput" placeholder="O que você procura para sua obra hoje? (ex: escada, tinta, bomba...)" aria-label="Buscar produtos">
+      <button class="search-bar__clear" id="searchClear" aria-label="Limpar busca"><svg class="ic"><use href="#ic-close"/></svg></button>
+      <button class="search-bar__submit" id="searchSubmit" aria-label="Executar busca"><svg class="ic"><use href="#ic-search"/></svg></button>
+    </div>
+
+    <!-- Ações: WhatsApp & Meu Orçamento -->
+    <div class="header__actions">
+      <a class="header-contact" href="#" data-wa="Olá! Vim pelo site da Ferragens Santa Rita e gostaria de tirar dúvidas com um consultor.">
+        <div class="header-contact__icon">
+          <svg class="ic"><use href="#ic-whats"/></svg>
+        </div>
+        <div class="header-contact__info">
+          <span class="header-contact__label">Compre pelo WhatsApp</span>
+          <span class="header-contact__val">Vendedores Online</span>
+        </div>
+      </a>
+
+      <button class="cart-button" id="openCartBtn" aria-label="Abrir meu orçamento">
+        <div class="cart-button__icon-wrap">
+          <svg class="ic" style="font-size:1.35rem;"><use href="#ic-cart"/></svg>
+          <span class="cart-button__badge" hidden>0</span>
+        </div>
+        <div class="cart-button__info">
+          <span class="cart-button__title">Meu Orçamento</span>
+          <span class="cart-button__total" id="cartTotalHeader">R$ 0,00</span>
+        </div>
+      </button>
+
+      <button class="btn-mobile-menu" id="mobileMenuBtn" aria-label="Abrir menu de departamentos" aria-expanded="false">
+        <svg class="ic"><use href="#ic-menu"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ================= NAVEGAÇÃO DE DEPARTAMENTOS ================= -->
+<nav class="dept-nav" aria-label="Departamentos do Home Center">
+  <div class="container dept-nav__in">
+    <div class="dept-nav__menu" id="deptNavMenu">
+      <button class="dept-nav__all-btn" data-jump="all">
+        <svg class="ic"><use href="#ic-menu"/></svg> Todos os Departamentos
+      </button>
+      <a href="#produtos" class="dept-nav__link is-active" data-jump="all">Ofertas Gerais</a>
+      <a href="#produtos" class="dept-nav__link" data-jump="Ferragens"><svg class="ic"><use href="#ic-nut"/></svg> Ferragens</a>
+      <a href="#produtos" class="dept-nav__link" data-jump="Ferramentas"><svg class="ic"><use href="#ic-wrench"/></svg> Ferramentas</a>
+      <a href="#produtos" class="dept-nav__link" data-jump="Elétricos"><svg class="ic"><use href="#ic-bolt"/></svg> Elétrica</a>
+      <a href="#produtos" class="dept-nav__link" data-jump="Hidráulicos"><svg class="ic"><use href="#ic-tap"/></svg> Hidráulica</a>
+      <a href="#produtos" class="dept-nav__link" data-jump="Tintas"><svg class="ic"><use href="#ic-roller"/></svg> Tintas</a>
+      <a href="#produtos" class="dept-nav__link" data-jump="Portas & Telhas"><svg class="ic"><use href="#ic-door"/></svg> Portas & Telhas</a>
+      <a href="#produtos" class="dept-nav__link dept-nav__link--hot" data-jump="all">🔥 OFERTAS DA SEMANA</a>
+    </div>
+
+    <a href="#" class="dept-nav__cta" data-wa="Olá! Gostaria de enviar uma lista de materiais em PDF para cotação na Ferragens Santa Rita.">
+      📋 Enviar Lista de Obra
+    </a>
+  </div>
+</nav>
+
+<main id="topo">
+
+<!-- ================= HERO & CARROSSEL DE BANNERS ================= -->
+<section class="hero-section">
+  <div class="container hero-grid">
+    <!-- Slider Principal de Campanhas -->
+    <div class="hero-slider" id="heroSlider">
+      <div class="slider-track" id="sliderTrack">
+        <!-- Slide 1 -->
+        <div class="slide slide-1">
+          <div class="slide__content reveal">
+            <span class="slide__badge">🔥 Festival da Construção & Reforma</span>
+            <h1 class="slide__title">A BASE <em>FORTE</em> PARA SUA OBRA</h1>
+            <p class="slide__desc">Do alicerce ao acabamento: escadas, portas, tintas, bombas e louças com o menor preço e entrega rápida no seu canteiro de obras.</p>
+            <div class="slide__ctas">
+              <a href="#produtos" class="btn btn--primary btn--lg">Conferir Ofertas <svg class="ic"><use href="#ic-arrow"/></svg></a>
+              <a href="#" class="btn btn--ghost-white btn--lg" data-wa="Olá! Quero solicitar um orçamento completo para minha obra.">
+                <svg class="ic"><use href="#ic-whats"/></svg> Orçamento no WhatsApp
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="slide slide-2">
+          <div class="slide__content">
+            <span class="slide__badge" style="background:#EF4444;color:#FFF;">⚡ Linha Profissional</span>
+            <h2 class="slide__title">FERRAMENTAS & <em>MÁQUINAS</em></h2>
+            <p class="slide__desc">As melhores marcas para profissionais exigentes. Furadeiras, escadas reforçadas, ferramentas manuais e elétricas com garantia total.</p>
+            <div class="slide__ctas">
+              <a href="#produtos" class="btn btn--primary btn--lg" data-jump="Ferramentas">Ver Ferramentas <svg class="ic"><use href="#ic-arrow"/></svg></a>
+              <a href="#" class="btn btn--ghost-white btn--lg" data-wa="Olá! Gostaria de cotar ferramentas elétricas profissionais.">
+                <svg class="ic"><use href="#ic-whats"/></svg> Falar com Especialista
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="slide slide-3">
+          <div class="slide__content">
+            <span class="slide__badge" style="background:#10B981;color:#FFF;">🎨 Renove sua Casa</span>
+            <h2 class="slide__title">TINTAS & <em>ACABAMENTOS</em></h2>
+            <p class="slide__desc">Tintas Coral, Hydrolux, duchas Lorenzetti e louças Luzarte com preços imbatíveis. Parcele em até 10x sem juros.</p>
+            <div class="slide__ctas">
+              <a href="#produtos" class="btn btn--primary btn--lg" data-jump="Tintas">Ver Tintas & Louças <svg class="ic"><use href="#ic-arrow"/></svg></a>
+              <a href="#" class="btn btn--ghost-white btn--lg" data-wa="Olá! Gostaria de cotar tintas e materiais de acabamento.">
+                <svg class="ic"><use href="#ic-whats"/></svg> Consultar Cores
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Controles do Slider -->
+      <button class="slider-arrow slider-arrow--prev" id="sliderPrev" aria-label="Banner anterior">‹</button>
+      <button class="slider-arrow slider-arrow--next" id="sliderNext" aria-label="Próximo banner">›</button>
+
+      <div class="slider-nav" id="sliderNav">
+        <button class="slider-dot is-active" aria-label="Ir para banner 1"></button>
+        <button class="slider-dot" aria-label="Ir para banner 2"></button>
+        <button class="slider-dot" aria-label="Ir para banner 3"></button>
+      </div>
+    </div>
+
+    <!-- Destaques Rápidos da Semana (Cards Laterais) -->
+    <div class="hero-side">
+      <div class="side-card reveal" data-quick="ducha-zagonel-ss">
+        <div class="side-card__media">
+          <svg class="ic"><use href="#ic-shower"/></svg>
+        </div>
+        <div class="side-card__body">
+          <span class="side-card__tag">⚡ SUPER OFERTA</span>
+          <h3 class="side-card__title">Ducha Zagonel SS Sublime 4T</h3>
+          <div class="side-card__price-row">
+            <span class="side-card__old">R$ 74,90</span>
+            <span class="side-card__price">R$ 59,00 <span>un.</span></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="side-card reveal" data-quick="vaso-luzarte-acoplado">
+        <div class="side-card__media">
+          <svg class="ic"><use href="#ic-toilet"/></svg>
+        </div>
+        <div class="side-card__body">
+          <span class="side-card__tag">🏷️ KIT COMPLETO</span>
+          <h3 class="side-card__title">Vaso Acoplado Luzarte Branco</h3>
+          <div class="side-card__price-row">
+            <span class="side-card__old">R$ 519,00</span>
+            <span class="side-card__price">R$ 445,00 <span>kit</span></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="side-card reveal" data-quick="lampada-led-glight">
+        <div class="side-card__media">
+          <svg class="ic"><use href="#ic-bulb"/></svg>
+        </div>
+        <div class="side-card__body">
+          <span class="side-card__tag">💡 ILUMINAÇÃO LED</span>
+          <h3 class="side-card__title">Lâmpadas LED G-Light Bivolt</h3>
+          <div class="side-card__price-row">
+            <span class="side-card__old">R$ 6,99</span>
+            <span class="side-card__price">R$ 3,99 <span>a partir</span></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= BARRA DE VANTAGENS & TRUST ================= -->
+<div class="trust-strip">
+  <div class="container">
+    <div class="trust-grid">
+      <div class="trust-item reveal">
+        <div class="trust-item__icon"><svg class="ic"><use href="#ic-truck"/></svg></div>
+        <div>
+          <div class="trust-item__title">Entrega Expressa na Obra</div>
+          <p class="trust-item__sub">Frota própria ágil no seu endereço</p>
+        </div>
+      </div>
+
+      <div class="trust-item reveal">
+        <div class="trust-item__icon"><svg class="ic"><use href="#ic-card"/></svg></div>
+        <div>
+          <div class="trust-item__title">Até 10x sem Juros</div>
+          <p class="trust-item__sub">Cartões e desconto no PIX</p>
+        </div>
+      </div>
+
+      <div class="trust-item reveal">
+        <div class="trust-item__icon"><svg class="ic"><use href="#ic-whats"/></svg></div>
+        <div>
+          <div class="trust-item__title">Vendas pelo WhatsApp</div>
+          <p class="trust-item__sub">Orçamento pronto em minutos</p>
+        </div>
+      </div>
+
+      <div class="trust-item reveal">
+        <div class="trust-item__icon"><svg class="ic"><use href="#ic-shield"/></svg></div>
+        <div>
+          <div class="trust-item__title">Marcas Líderes & Garantia</div>
+          <p class="trust-item__sub">Lorenzetti, Coral, Zagonel e mais</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ================= GRID DE DEPARTAMENTOS ================= -->
+<section class="section section--white" id="departamentos">
+  <div class="container">
+    <header class="section-head reveal">
+      <div class="section-head__left">
+        <div class="eyebrow"><span class="eyebrow__dot"></span> Navegue por Categoria</div>
+        <h2 class="section-title">DEPARTAMENTOS <em>COMPLETOS</em></h2>
+        <p class="section-sub">Encontre tudo o que seu projeto necessita organizado nos principais setores da construção civil.</p>
+      </div>
+    </header>
+
+    <div class="cats-grid reveal">
+      <div class="cat-card" data-jump="Ferragens">
+        <div class="cat-card__icon-wrap"><svg class="ic"><use href="#ic-nut"/></svg></div>
+        <span class="cat-card__name">Ferragens em Geral</span>
+        <span class="cat-card__count">Portas, Telhas & Fixação</span>
+      </div>
+
+      <div class="cat-card" data-jump="Ferramentas">
+        <div class="cat-card__icon-wrap"><svg class="ic"><use href="#ic-wrench"/></svg></div>
+        <span class="cat-card__name">Ferramentas</span>
+        <span class="cat-card__count">Manuais, Elétricas & Escadas</span>
+      </div>
+
+      <div class="cat-card" data-jump="Elétricos">
+        <div class="cat-card__icon-wrap"><svg class="ic"><use href="#ic-bolt"/></svg></div>
+        <span class="cat-card__name">Material Elétrico</span>
+        <span class="cat-card__count">Duchas, Fios & Lâmpadas LED</span>
+      </div>
+
+      <div class="cat-card" data-jump="Hidráulicos">
+        <div class="cat-card__icon-wrap"><svg class="ic"><use href="#ic-tap"/></svg></div>
+        <span class="cat-card__name">Hidráulicos</span>
+        <span class="cat-card__count">Bombas, Tubos & Louças</span>
+      </div>
+
+      <div class="cat-card" data-jump="Tintas">
+        <div class="cat-card__icon-wrap"><svg class="ic"><use href="#ic-roller"/></svg></div>
+        <span class="cat-card__name">Tintas & Pintura</span>
+        <span class="cat-card__count">Coral, Hydrolux & Acessórios</span>
+      </div>
+
+      <div class="cat-card" data-jump="Portas & Telhas">
+        <div class="cat-card__icon-wrap"><svg class="ic"><use href="#ic-door"/></svg></div>
+        <span class="cat-card__name">Portas & Telhas</span>
+        <span class="cat-card__count">Eternit, Alumínio & Madeiras</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= VITRINE DE PRODUTOS & OFERTAS ================= -->
+<section class="section" id="produtos">
+  <div class="container">
+    <header class="section-head reveal">
+      <div class="section-head__left">
+        <div class="eyebrow"><span class="eyebrow__dot"></span> Preços Especiais de Fábrica</div>
+        <h2 class="section-title">OFERTAS EM <em>DESTAQUE</em></h2>
+        <p class="section-sub">Monte sua lista de materiais adicionando ao orçamento e confirme valores e entrega no WhatsApp.</p>
+      </div>
+    </header>
+
+    <!-- Barra de Controles: Filtros Chips + Ordenação -->
+    <div class="prods-controls reveal">
+      <div class="filter-chips" id="filterChips">
+        <button class="chip is-on" data-filter="all">Todos os Produtos</button>
+        <button class="chip" data-filter="Ferragens">Ferragens</button>
+        <button class="chip" data-filter="Ferramentas">Ferramentas</button>
+        <button class="chip" data-filter="Elétricos">Elétricos</button>
+        <button class="chip" data-filter="Hidráulicos">Hidráulicos</button>
+        <button class="chip" data-filter="Tintas">Tintas</button>
+        <button class="chip" data-filter="Portas & Telhas">Portas & Telhas</button>
+      </div>
+
+      <div class="prods-sort">
+        <span id="productsCount">Carregando ofertas...</span>
+        <label for="sortSelect" style="display:none;">Ordenar por</label>
+        <select id="sortSelect" aria-label="Ordenar produtos">
+          <option value="destaques">Mais Populares</option>
+          <option value="menor-preco">Menor Preço</option>
+          <option value="maior-preco">Maior Preço</option>
+          <option value="nome">Ordem Alfabética</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Grid de Produtos Dinâmico -->
+    <div class="products-grid reveal" id="productsGrid"></div>
+
+    <!-- Estado Vazio de Busca -->
+    <div class="empty-state" id="emptyState" hidden>
+      <div class="empty-state__icon">🔍</div>
+      <h3 class="empty-state__title">Nenhum produto encontrado com estes filtros</h3>
+      <p>Nosso estoque físico conta com mais de 1.200 itens. Fale direto com nossos consultores no WhatsApp:</p>
+      <a href="#" class="btn btn--wa btn--lg" data-wa="Olá! Estou procurando um material específico para minha obra e gostaria de consultar a disponibilidade no estoque.">
+        <svg class="ic"><use href="#ic-whats"/></svg> Consultar Estoque no WhatsApp
+      </a>
+    </div>
+
+    <!-- Banners Promocionais Duplos (Campanhas) -->
+    <div class="promo-banners-grid reveal">
+      <div class="promo-banner promo-banner--1">
+        <div class="promo-banner__content">
+          <span class="promo-banner__tag">Combo Especial</span>
+          <h3 class="promo-banner__title">Pintura & Acabamento</h3>
+          <p class="promo-banner__desc">Tintas Coral e Hydrolux com rolos, lixas e fitas em condições especiais para grandes metragens.</p>
+          <a href="#produtos" class="btn btn--primary" data-jump="Tintas">Aproveitar Ofertas <svg class="ic"><use href="#ic-arrow"/></svg></a>
+        </div>
+      </div>
+
+      <div class="promo-banner promo-banner--2">
+        <div class="promo-banner__content">
+          <span class="promo-banner__tag">Renovação Completa</span>
+          <h3 class="promo-banner__title">Banheiro & Hidráulica</h3>
+          <p class="promo-banner__desc">Duchas Lorenzetti e Zagonel, vasos acoplados Luzarte e bombas d'água pronta-entrega.</p>
+          <a href="#produtos" class="btn btn--ghost-white" data-jump="Hidráulicos">Ver Departamento <svg class="ic"><use href="#ic-arrow"/></svg></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ÁREA EXCLUSIVA PARA PROFISSIONAIS & CONSTRUTORAS ================= -->
+<section class="b2b-section">
+  <div class="container b2b-grid">
+    <div class="b2b-content reveal">
+      <div class="eyebrow"><span class="eyebrow__dot"></span> Atendimento PJ & Construtores</div>
+      <h2 class="b2b-title">É PROFISSIONAL DA OBRA OU <span>CONSTRUTORA?</span></h2>
+      <p class="b2b-desc">Temos condições de pagamento diferenciadas, faturamento para empresas e uma equipe técnica pronta para orçar suas listas de materiais em minutos.</p>
+      
+      <div class="b2b-features">
+        <div class="b2b-feature-item">
+          <svg class="ic"><use href="#ic-check"/></svg>
+          <div>
+            <strong>Faturamento Facilitado PJ</strong>
+            <p>Boleto bancário e prazos especiais</p>
+          </div>
+        </div>
+        <div class="b2b-feature-item">
+          <svg class="ic"><use href="#ic-check"/></svg>
+          <div>
+            <strong>Entrega Programada no Canteiro</strong>
+            <p>Agilidade sem atrasar o cronograma</p>
+          </div>
+        </div>
+        <div class="b2b-feature-item">
+          <svg class="ic"><use href="#ic-check"/></svg>
+          <div>
+            <strong>Tabela Especial para Construtores</strong>
+            <p>Margem competitiva para seu orçamento</p>
+          </div>
+        </div>
+        <div class="b2b-feature-item">
+          <svg class="ic"><use href="#ic-check"/></svg>
+          <div>
+            <strong>Consultor Técnico Dedicado</strong>
+            <p>Indicação das melhores marcas e normas</p>
+          </div>
+        </div>
+      </div>
+
+      <a href="#" class="btn btn--wa btn--lg" data-wa="Olá! Sou profissional da construção civil / construtora e gostaria de abrir cadastro para cotações com desconto.">
+        <svg class="ic"><use href="#ic-whats"/></svg> Cadastrar como Profissional / Construtor
+      </a>
+    </div>
+
+    <div class="b2b-card-cta reveal">
+      <h3 class="b2b-card-cta__title">Envie sua Planilha ou Projeto</h3>
+      <p class="b2b-card-cta__text">Você pode enviar seu arquivo PDF, foto da lista em papel ou memorial descritivo direto no WhatsApp de nossa equipe corporativa.</p>
+      <a href="#" class="btn btn--primary btn--block btn--lg" data-wa="Olá! Estou enviando minha lista de materiais para cotação em lote.">
+        <svg class="ic"><use href="#ic-whats"/></svg> Enviar Lista pelo WhatsApp
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= DEPOIMENTOS & PROVA SOCIAL ================= -->
+<section class="section reviews-section">
+  <div class="container">
+    <header class="section-head reveal">
+      <div class="section-head__left">
+        <div class="eyebrow"><span class="eyebrow__dot"></span> Avaliações de Clientes</div>
+        <h2 class="section-title">QUEM COMPRA, <em>RECOMENDA</em></h2>
+        <p class="section-sub">Nota média de 4.9 ★★★★★ no Google Reviews com mais de 500 clientes atendidos na região.</p>
+      </div>
+    </header>
+
+    <div class="reviews-grid reveal">
+      <article class="review-card">
+        <div class="review-card__stars">★★★★★</div>
+        <p class="review-card__quote">"Excelente atendimento! Mandei a lista de materiais de manhã no WhatsApp e à tarde o caminhão já estava descarregando no meu canteiro. Preço justo e sem dor de cabeça."</p>
+        <div class="review-card__author">
+          <div class="review-card__avatar">MS</div>
+          <div>
+            <div class="review-card__name">Marcos Silva</div>
+            <div class="review-card__role">Mestre de Obras • Residencial</div>
+          </div>
+        </div>
+      </article>
+
+      <article class="review-card">
+        <div class="review-card__stars">★★★★★</div>
+        <p class="review-card__quote">"Comprei todas as portas de alumínio e as tintas Coral para a reforma da minha casa. Os vendedores entendem de verdade do assunto e me ajudaram a economizar bastante."</p>
+        <div class="review-card__author">
+          <div class="review-card__avatar">CR</div>
+          <div>
+            <div class="review-card__name">Carla Rodrigues</div>
+            <div class="review-card__role">Cliente Residencial</div>
+          </div>
+        </div>
+      </article>
+
+      <article class="review-card">
+        <div class="review-card__stars">★★★★★</div>
+        <p class="review-card__quote">"Sou eletricista há 12 anos e compro todo o material na Santa Rita. Linha de lâmpadas G-Light e fiação completa com certificado do Inmetro. Recomendo a todos os colegas."</p>
+        <div class="review-card__author">
+          <div class="review-card__avatar">RL</div>
+          <div>
+            <div class="review-card__name">Roberto Lima</div>
+            <div class="review-card__role">Eletricista Instalador</div>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ================= LOCALIZAÇÃO, HORÁRIOS & CONTATO ================= -->
+<section class="section section--white" id="contato">
+  <div class="container contact-grid">
+    <div class="contact-info-card reveal">
+      <div class="eyebrow"><span class="eyebrow__dot"></span> Visite nossa Loja</div>
+      <h2 class="section-title">VENHA NOS <em>VISITAR</em></h2>
+      <p class="section-sub">Amplo estacionamento gratuito para clientes e equipe pronta para carregar seu veículo com rapidez.</p>
+
+      <div class="contact-list">
+        <div class="contact-list-item">
+          <div class="contact-list-item__icon"><svg class="ic"><use href="#ic-pin"/></svg></div>
+          <div class="contact-list-item__body">
+            <strong>Endereço da Loja</strong>
+            <span data-address>Rua das Ferragens, 500 — Centro Industrial<br>Sua Cidade / UF</span>
+          </div>
+        </div>
+
+        <div class="contact-list-item">
+          <div class="contact-list-item__icon"><svg class="ic"><use href="#ic-clock"/></svg></div>
+          <div class="contact-list-item__body">
+            <strong>Horário de Funcionamento</strong>
+            <span data-hours>Seg a Sex: 07h30 às 18h | Sábado: 07h30 às 13h</span>
+          </div>
+        </div>
+
+        <div class="contact-list-item">
+          <div class="contact-list-item__icon"><svg class="ic"><use href="#ic-phone"/></svg></div>
+          <div class="contact-list-item__body">
+            <strong>Central Telefônica & WhatsApp</strong>
+            <span data-phone-display>(00) 00000-0000</span>
+          </div>
+        </div>
+      </div>
+
+      <a href="#" class="btn btn--wa btn--lg btn--block" data-wa="Olá! Gostaria de saber a rota até a loja física da Ferragens Santa Rita.">
+        <svg class="ic"><use href="#ic-whats"/></svg> Chamar no WhatsApp Agora
+      </a>
+    </div>
+
+    <!-- Formulário de Orçamento Expresso -->
+    <div class="form-card reveal">
+      <div class="eyebrow"><span class="eyebrow__dot"></span> Cotação Rápida</div>
+      <h2 class="section-title">PEÇA SEU <em>ORÇAMENTO</em></h2>
+      <p class="section-sub">Preencha o formulário abaixo para enviar sua solicitação direto para a nossa equipe:</p>
+
+      <form id="expressForm" novalidate>
+        <div class="form-group">
+          <label for="formNome">Seu Nome / Razão Social</label>
+          <input type="text" id="formNome" name="nome" placeholder="Ex.: João Silva ou Construtora Alpha" required>
+        </div>
+
+        <div class="form-group">
+          <label for="formTel">Telefone / WhatsApp com DDD</label>
+          <input type="tel" id="formTel" name="tel" placeholder="(00) 00000-0000" required>
+        </div>
+
+        <div class="form-group">
+          <label for="formMsg">O que você precisa para sua obra?</label>
+          <textarea id="formMsg" name="msg" rows="4" placeholder="Ex.: 2 portas de alumínio, 1 bomba d'água 1/2 HP, 4 latas de tinta Coral 18L e 1 escada de 7 degraus." required></textarea>
+        </div>
+
+        <button type="submit" class="btn btn--primary btn--block btn--lg">
+          <svg class="ic"><use href="#ic-whats"/></svg> Enviar Pedido no WhatsApp
+        </button>
+        <p class="form-err" id="formErr" hidden>Por favor, preencha todos os campos para enviar seu pedido.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ================= RODAPÉ E-COMMERCE COMPLETO ================= -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <!-- Coluna 1: Marca & Redes -->
+      <div class="footer-brand">
+        <div class="brand">
+          <div class="brand__symbol">
+            <svg viewBox="0 0 120 120" fill="none">
+              <path d="M60 6 108 33v54L60 114 12 87V33Z" stroke="#0F172A" stroke-width="10" stroke-linejoin="round"/>
+              <text x="60" y="78" text-anchor="middle" font-family="Anton, Impact, sans-serif" font-size="44" font-weight="900" fill="#0F172A">FSR</text>
+            </svg>
+          </div>
+          <div class="brand__text">
+            <span class="brand__name">SANTA <span>RITA</span></span>
+            <span class="brand__sub" style="color:#94A3B8;">HOME CENTER</span>
+          </div>
+        </div>
+        <p class="footer-brand__desc">A base forte para sua construção e reforma. Soluções completas com atendimento técnico, grandes marcas e entrega expressa.</p>
+        <div class="footer-socials">
+          <a href="#" class="social-btn" aria-label="WhatsApp"><svg class="ic"><use href="#ic-whats"/></svg></a>
+          <a href="#" class="social-btn" aria-label="Telefone"><svg class="ic"><use href="#ic-phone"/></svg></a>
+          <a href="#" class="social-btn" aria-label="Localização"><svg class="ic"><use href="#ic-pin"/></svg></a>
+        </div>
+      </div>
+
+      <!-- Coluna 2: Departamentos -->
+      <div class="footer-col">
+        <h4>Departamentos</h4>
+        <div class="footer-links">
+          <a href="#produtos" data-jump="Ferragens">Ferragens em Geral</a>
+          <a href="#produtos" data-jump="Ferramentas">Ferramentas & Máquinas</a>
+          <a href="#produtos" data-jump="Elétricos">Material Elétrico & LED</a>
+          <a href="#produtos" data-jump="Hidráulicos">Hidráulica & Bombas</a>
+          <a href="#produtos" data-jump="Tintas">Tintas & Acabamento</a>
+          <a href="#produtos" data-jump="Portas & Telhas">Portas, Esquadrias & Telhas</a>
+        </div>
+      </div>
+
+      <!-- Coluna 3: Institucional -->
+      <div class="footer-col">
+        <h4>Institucional</h4>
+        <div class="footer-links">
+          <a href="#topo">Página Inicial</a>
+          <a href="#departamentos">Departamentos</a>
+          <a href="#produtos">Ofertas da Semana</a>
+          <a href="#contato">Localização & Horários</a>
+          <a href="#" data-wa="Olá! Gostaria de falar com o SAC da Ferragens Santa Rita.">Central de Atendimento</a>
+          <a href="#" data-wa="Olá! Sou fornecedor e gostaria de apresentar catálogo de produtos.">Seja um Fornecedor</a>
+        </div>
+      </div>
+
+      <!-- Coluna 4: Atendimento & Pagamentos -->
+      <div class="footer-col">
+        <h4>Formas de Pagamento</h4>
+        <p style="font-size:0.8rem;margin-bottom:8px;">Aceitamos as principais bandeiras no cartão e condições exclusivas no PIX e Boleto PJ:</p>
+        <div class="payment-badges">
+          <span class="payment-pill">PIX (5% OFF)</span>
+          <span class="payment-pill">Visa</span>
+          <span class="payment-pill">Mastercard</span>
+          <span class="payment-pill">Elo</span>
+          <span class="payment-pill">Hipercard</span>
+          <span class="payment-pill">Boleto PJ</span>
+        </div>
+
+        <h4 style="margin-top:24px;">Atendimento</h4>
+        <div class="footer-links">
+          <span data-phone-display>(00) 00000-0000</span>
+          <span data-hours>Seg a Sex 07h30–18h | Sáb 07h30–13h</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <div class="container footer-bottom__in">
+      <p>© <span id="year">2026</span> Ferragens Santa Rita Home Center. Todos os direitos reservados.</p>
+      <p>Preços e condições de pagamento exclusivos para este canal. Imagens meramente ilustrativas.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ================= GAVETA DE ORÇAMENTO (MINICART DRAWER) ================= -->
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+<aside class="drawer" id="cartDrawer" aria-label="Meu Orçamento de Materiais" aria-modal="true" role="dialog">
+  <header class="drawer__header">
+    <h3><svg class="ic" style="color:var(--primary);"><use href="#ic-cart"/></svg> Meu Orçamento</h3>
+    <button class="drawer__close" id="drawerClose" aria-label="Fechar orçamento"><svg class="ic"><use href="#ic-close"/></svg></button>
+  </header>
+  <div class="drawer__progress-bar">
+    <svg class="ic"><use href="#ic-truck"/></svg> Envie seu pedido e receba o valor do frete na hora!
+  </div>
+  <div class="drawer__body" id="drawerBody"></div>
+  <footer class="drawer__footer">
+    <div class="drawer__total-row">
+      <span class="drawer__total-label">Subtotal Estimado:</span>
+      <strong class="drawer__total-val" id="drawerTotal">R$ 0,00</strong>
+    </div>
+    <p class="drawer__note">Valores de referência. O vendedor confirma disponibilidade e prazos no WhatsApp.</p>
+    <button class="btn btn--wa btn--block btn--lg" id="sendCartWa">
+      <svg class="ic"><use href="#ic-whats"/></svg> Enviar Orçamento no WhatsApp
+    </button>
+  </footer>
+</aside>
+
+<!-- ================= MODAL QUICK VIEW (VISUALIZAÇÃO RÁPIDA) ================= -->
+<div class="modal-backdrop" id="quickModal" aria-hidden="true" role="dialog" aria-modal="true">
+  <div class="modal-card">
+    <button class="modal-close" id="modalClose" aria-label="Fechar janela"><svg class="ic"><use href="#ic-close"/></svg></button>
+    <div class="modal-grid">
+      <div class="modal-media" id="modalMedia"></div>
+      <div class="modal-details">
+        <span class="modal-category" id="modalCat">Categoria</span>
+        <h3 class="modal-title" id="modalTitle">Nome do Produto</h3>
+        <div class="modal-price-wrap">
+          <div class="modal-price" id="modalPrice">R$ 0,00</div>
+          <span style="font-size:0.75rem;color:var(--success);font-weight:600;">✓ Pronta-entrega no estoque da loja</span>
+        </div>
+        <p class="modal-specs" id="modalSpecs">Especificações completas do produto.</p>
+        
+        <div class="modal-qty-actions">
+          <div class="qty-control">
+            <button class="qty-btn" id="modalQtyMinus" aria-label="Diminuir quantidade">−</button>
+            <span class="qty-num" id="modalQty">1</span>
+            <button class="qty-btn" id="modalQtyPlus" aria-label="Aumentar quantidade">+</button>
+          </div>
+          <button class="btn btn--primary btn--lg" id="modalAddBtn" style="flex:1;">
+            <svg class="ic"><use href="#ic-cart"/></svg> Adicionar ao Orçamento
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ================= WIDGETS FLUTUANTES ================= -->
+<a class="floating-wa" href="#" data-wa="Olá! Vim pelo site da Ferragens Santa Rita e gostaria de atendimento." aria-label="Falar com especialista no WhatsApp">
+  <svg class="ic" style="font-size:1.4rem;"><use href="#ic-whats"/></svg>
+  <span>Atendimento WhatsApp</span>
+</a>
+
+<button class="back-to-top" id="backToTop" aria-label="Voltar ao topo da página">
+  <svg class="ic"><use href="#ic-arrow"/></svg>
+</button>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="assets/js/app.js"></script>
+</body>
+</html>
