@@ -7,15 +7,67 @@
   <title>Ferragens Santa Rita | Home Center & Materiais de Construção</title>
   <meta name="description" content="Tudo para sua obra ou reforma no melhor Home Center da região: ferragens, ferramentas, materiais elétricos, hidráulicos, tintas, portas e telhas com entrega rápida e condições facilitadas.">
   <meta name="keywords" content="home center, ferragens, ferramentas, material eletrico, hidraulica, tintas coral, lorenzetti, portas, escadas de aluminio, materiais de construcao">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="Ferragens Santa Rita Home Center">
+  <!-- TROQUE pelo domínio final assim que o deploy/domínio próprio estiver definido -->
+  <link rel="canonical" href="https://ferragenssantarita.vercel.app/">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Ferragens Santa Rita | Home Center & Materiais de Construção">
   <meta property="og:description" content="Tudo para sua obra em um só lugar com preço justo, marcas líderes e entrega expressa.">
   <meta property="og:locale" content="pt_BR">
+  <meta property="og:url" content="https://ferragenssantarita.vercel.app/">
+  <meta property="og:site_name" content="Ferragens Santa Rita Home Center">
+  <meta property="og:image" content="https://ferragenssantarita.vercel.app/assets/img/og-image.svg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Ferragens Santa Rita | Home Center & Materiais de Construção">
+  <meta name="twitter:description" content="Tudo para sua obra em um só lugar com preço justo, marcas líderes e entrega expressa.">
+  <meta name="twitter:image" content="https://ferragenssantarita.vercel.app/assets/img/og-image.svg">
   <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="mask-icon" href="assets/img/favicon.svg" color="#0F172A">
+  <link rel="apple-touch-icon" href="assets/img/favicon.svg">
+  <link rel="manifest" href="site.webmanifest">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HomeAndConstructionBusiness",
+    "name": "Ferragens Santa Rita Home Center",
+    "description": "Home Center completo com ferragens, ferramentas, material elétrico, hidráulico, tintas, portas e telhas.",
+    "url": "https://ferragenssantarita.vercel.app/",
+    "telephone": "+55 00 00000-0000",
+    "priceRange": "$$",
+    "image": "https://ferragenssantarita.vercel.app/assets/img/og-image.svg",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Rua das Ferragens, 500 — Centro Industrial",
+      "addressLocality": "Sua Cidade",
+      "addressRegion": "UF",
+      "addressCountry": "BR"
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        "opens": "07:30",
+        "closes": "18:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": "Saturday",
+        "opens": "07:30",
+        "closes": "13:00"
+      }
+    ],
+    "sameAs": []
+  }
+  </script>
+  <!-- Os dados acima (telefone, endereço, horário) devem ser mantidos em sincronia
+       com o objeto CONFIG em assets/js/app.js ao personalizar o site. -->
 </head>
 <body>
 
@@ -322,7 +374,7 @@
       </div>
     </header>
 
-    <div class="cats-grid reveal">
+    <div class="cats-grid reveal stagger-grid">
       <div class="cat-card" data-jump="Ferragens">
         <div class="cat-card__icon-wrap"><svg class="ic"><use href="#ic-nut"/></svg></div>
         <span class="cat-card__name">Ferragens em Geral</span>
@@ -398,7 +450,7 @@
     </div>
 
     <!-- Grid de Produtos Dinâmico -->
-    <div class="products-grid reveal" id="productsGrid"></div>
+    <div class="products-grid reveal stagger-grid" id="productsGrid"></div>
 
     <!-- Estado Vazio de Busca -->
     <div class="empty-state" id="emptyState" hidden>
@@ -411,7 +463,7 @@
     </div>
 
     <!-- Banners Promocionais Duplos (Campanhas) -->
-    <div class="promo-banners-grid reveal">
+    <div class="promo-banners-grid reveal stagger-grid">
       <div class="promo-banner promo-banner--1">
         <div class="promo-banner__content">
           <span class="promo-banner__tag">Combo Especial</span>
@@ -441,7 +493,7 @@
       <h2 class="b2b-title">É PROFISSIONAL DA OBRA OU <span>CONSTRUTORA?</span></h2>
       <p class="b2b-desc">Temos condições de pagamento diferenciadas, faturamento para empresas e uma equipe técnica pronta para orçar suas listas de materiais em minutos.</p>
       
-      <div class="b2b-features">
+      <div class="b2b-features reveal stagger-grid">
         <div class="b2b-feature-item">
           <svg class="ic"><use href="#ic-check"/></svg>
           <div>
@@ -498,7 +550,7 @@
       </div>
     </header>
 
-    <div class="reviews-grid reveal">
+    <div class="reviews-grid reveal stagger-grid">
       <article class="review-card">
         <div class="review-card__stars">★★★★★</div>
         <p class="review-card__quote">"Excelente atendimento! Mandei a lista de materiais de manhã no WhatsApp e à tarde o caminhão já estava descarregando no meu canteiro. Preço justo e sem dor de cabeça."</p>

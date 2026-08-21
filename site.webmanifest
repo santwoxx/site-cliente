@@ -1,0 +1,19 @@
+{
+  "name": "Ferragens Santa Rita Home Center",
+  "short_name": "Santa Rita",
+  "description": "Tudo para sua obra ou reforma: ferragens, ferramentas, materiais elétricos, hidráulicos, tintas, portas e telhas.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#F8FAFC",
+  "theme_color": "#0F172A",
+  "lang": "pt-BR",
+  "icons": [
+    {
+      "src": "assets/img/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

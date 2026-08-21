@@ -180,7 +180,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .reveal {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+  .reveal, .stagger-grid > * {
     opacity: 1;
     transform: none;
     transition: none;
@@ -189,6 +195,42 @@ h1, h2, h3, h4, h5, h6 {
     scroll-behavior: auto;
   }
 }
+
+/* =========================================================
+   REVELAÇÃO EM CASCATA (STAGGER) PARA GRIDS
+   ========================================================= */
+.stagger-grid > * {
+  opacity: 0;
+  transform: translateY(18px) scale(0.98);
+  transition: opacity 0.55s ease, transform 0.55s cubic-bezier(0.22, 0.9, 0.3, 1);
+}
+
+.stagger-grid.is-in > * {
+  opacity: 1;
+  transform: none;
+}
+
+.stagger-grid.is-in > *:nth-child(1) { transition-delay: 0.03s; }
+.stagger-grid.is-in > *:nth-child(2) { transition-delay: 0.08s; }
+.stagger-grid.is-in > *:nth-child(3) { transition-delay: 0.13s; }
+.stagger-grid.is-in > *:nth-child(4) { transition-delay: 0.18s; }
+.stagger-grid.is-in > *:nth-child(5) { transition-delay: 0.23s; }
+.stagger-grid.is-in > *:nth-child(6) { transition-delay: 0.28s; }
+.stagger-grid.is-in > *:nth-child(7) { transition-delay: 0.33s; }
+.stagger-grid.is-in > *:nth-child(8) { transition-delay: 0.38s; }
+.stagger-grid.is-in > *:nth-child(9) { transition-delay: 0.43s; }
+.stagger-grid.is-in > *:nth-child(10) { transition-delay: 0.48s; }
+.stagger-grid.is-in > *:nth-child(n+11) { transition-delay: 0.52s; }
+
+/* Itens que já usam .reveal individualmente (cascata leve por posição) */
+.hero-side .side-card.reveal.is-in:nth-child(1) { transition-delay: 0.05s; }
+.hero-side .side-card.reveal.is-in:nth-child(2) { transition-delay: 0.15s; }
+.hero-side .side-card.reveal.is-in:nth-child(3) { transition-delay: 0.25s; }
+
+.trust-grid .trust-item.reveal.is-in:nth-child(1) { transition-delay: 0.03s; }
+.trust-grid .trust-item.reveal.is-in:nth-child(2) { transition-delay: 0.1s; }
+.trust-grid .trust-item.reveal.is-in:nth-child(3) { transition-delay: 0.17s; }
+.trust-grid .trust-item.reveal.is-in:nth-child(4) { transition-delay: 0.24s; }
 
 /* =========================================================
    BOTÕES & CHIPS
@@ -208,6 +250,24 @@ h1, h2, h3, h4, h5, h6 {
   white-space: nowrap;
   transition: var(--transition);
   user-select: none;
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.btn::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(115deg, transparent 20%, rgba(255, 255, 255, 0.35) 45%, transparent 70%);
+  transform: translateX(-120%);
+  transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
+  pointer-events: none;
+}
+
+.btn:hover::before {
+  transform: translateX(120%);
 }
 
 .btn:hover {
@@ -215,7 +275,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .btn:active {
-  transform: translateY(0);
+  transform: translateY(0) scale(0.98);
 }
 
 .btn--primary {
@@ -627,6 +687,16 @@ h1, h2, h3, h4, h5, h6 {
   border: 2px solid var(--dark);
 }
 
+.cart-button__badge.is-bump {
+  animation: badgeBump 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+@keyframes badgeBump {
+  0% { transform: scale(1); }
+  35% { transform: scale(1.45); }
+  100% { transform: scale(1); }
+}
+
 .cart-button__info {
   display: flex;
   flex-direction: column;
@@ -780,10 +850,30 @@ h1, h2, h3, h4, h5, h6 {
   box-shadow: var(--shadow-lg);
 }
 
+.hero-slider::after {
+  content: "";
+  position: absolute;
+  inset: -20%;
+  z-index: 1;
+  background: radial-gradient(circle at 30% 40%, rgba(255, 184, 0, 0.14), transparent 60%);
+  animation: heroGlowDrift 14s ease-in-out infinite alternate;
+  pointer-events: none;
+}
+
+@keyframes heroGlowDrift {
+  0% { transform: translate(-3%, -2%) scale(1); }
+  100% { transform: translate(3%, 3%) scale(1.1); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-slider::after { animation: none; }
+}
+
 .slider-track {
   display: flex;
   width: 100%;
-  transition: transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform;
 }
 
 .slide {
@@ -913,6 +1003,11 @@ h1, h2, h3, h4, h5, h6 {
   background: var(--primary);
   color: var(--dark);
   border-color: var(--primary);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.slider-arrow:active {
+  transform: translateY(-50%) scale(0.95);
 }
 
 .slider-arrow--prev {
@@ -1108,6 +1203,24 @@ h1, h2, h3, h4, h5, h6 {
   text-transform: uppercase;
   color: var(--dark);
   margin: 0;
+  position: relative;
+  display: inline-block;
+}
+
+.section-title::after {
+  content: "";
+  display: block;
+  height: 3px;
+  width: 0;
+  margin-top: 8px;
+  background: linear-gradient(90deg, var(--primary), transparent);
+  border-radius: var(--radius-full);
+  transition: width 0.7s cubic-bezier(0.2, 0.8, 0.2, 1) 0.15s;
+}
+
+.section-head.is-in .section-title::after,
+.b2b-content.is-in .b2b-title::after {
+  width: 84px;
 }
 
 .section-title em {
@@ -1165,7 +1278,7 @@ h1, h2, h3, h4, h5, h6 {
 .cat-card:hover .cat-card__icon-wrap {
   background: var(--primary);
   color: var(--dark);
-  transform: scale(1.08);
+  transform: scale(1.08) rotate(-6deg);
 }
 
 .cat-card__name {
@@ -1275,9 +1388,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .prod-card:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-lg);
-  border-color: #CBD5E1;
+  transform: translateY(-6px);
+  box-shadow: 0 16px 28px -8px rgba(255, 184, 0, 0.28), var(--shadow-lg);
+  border-color: var(--primary);
 }
 
 .prod-card.is-added {
@@ -1368,7 +1481,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .prod-card:hover .prod-card__icon {
-  transform: scale(1.1);
+  transform: scale(1.12) rotate(-4deg);
   color: var(--primary-dark);
 }
 
@@ -1649,6 +1762,19 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.1;
   margin-bottom: 16px;
   text-transform: uppercase;
+  position: relative;
+  display: inline-block;
+}
+
+.b2b-title::after {
+  content: "";
+  display: block;
+  height: 3px;
+  width: 0;
+  margin-top: 10px;
+  background: linear-gradient(90deg, var(--primary), transparent);
+  border-radius: var(--radius-full);
+  transition: width 0.7s cubic-bezier(0.2, 0.8, 0.2, 1) 0.15s;
 }
 
 .b2b-title span {
@@ -2034,10 +2160,19 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 800;
   cursor: pointer;
   color: var(--dark);
+  transition: transform 0.15s ease, background 0.2s ease;
 }
 
 .qty-btn:hover {
   background: var(--border);
+}
+
+.qty-btn:active {
+  transform: scale(0.88);
+}
+
+.drawer-item__qty button:active {
+  transform: scale(0.85);
 }
 
 .qty-num {
@@ -2226,6 +2361,7 @@ h1, h2, h3, h4, h5, h6 {
   justify-content: center;
   font-size: 0.8rem;
   cursor: pointer;
+  transition: transform 0.15s ease;
 }
 
 .drawer-item__qty span {
@@ -2351,7 +2487,7 @@ h1, h2, h3, h4, h5, h6 {
   position: fixed;
   bottom: 30px;
   left: 50%;
-  transform: translateX(-50%) translateY(50px);
+  transform: translateX(-50%) translateY(50px) scale(0.92);
   background: var(--dark);
   color: var(--white);
   padding: 12px 24px;
@@ -2363,15 +2499,16 @@ h1, h2, h3, h4, h5, h6 {
   z-index: 300;
   opacity: 0;
   pointer-events: none;
-  transition: var(--transition);
+  transition: opacity 0.35s ease, transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
   display: flex;
   align-items: center;
   gap: 8px;
+  max-width: calc(100vw - 32px);
 }
 
 .toast.is-on {
   opacity: 1;
-  transform: translateX(-50%) translateY(0);
+  transform: translateX(-50%) translateY(0) scale(1);
 }
 
 /* =========================================================

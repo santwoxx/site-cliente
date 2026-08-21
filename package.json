@@ -1,0 +1,15 @@
+{
+  "name": "ferragens-santa-rita",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Home Center & Materiais de Construção — site estático (HTML/CSS/JS puro) otimizado para deploy na Vercel.",
+  "scripts": {
+    "dev": "node server.js",
+    "build": "node build.js"
+  },
+  "devDependencies": {
+    "clean-css": "^5.3.3",
+    "html-minifier-terser": "^7.2.0",
+    "terser": "^5.31.0"
+  }
+}

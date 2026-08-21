@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ferragenssantarita.vercel.app/sitemap.xml

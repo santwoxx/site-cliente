@@ -247,6 +247,9 @@ let slideAtual = 0;
 let slideTimer = null;
 let quickViewItem = null;
 let quickViewQty = 1;
+let produtosRenderedOnce = false;
+let cartCountAnterior = 0;
+const prefereMovimentoReduzido = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
 /* Orçamento no LocalStorage */
 const CHAVE_STORAGE = 'fsr_homecenter_cart';
@@ -266,6 +269,9 @@ function salvarCart() {
 function totalItens() {
   return cart.reduce((acc, i) => acc + i.qty, 0);
 }
+// Evita que o badge "pule" já na primeira renderização quando o cliente
+// volta ao site com itens salvos de uma visita anterior.
+cartCountAnterior = totalItens();
 
 function totalValor() {
   return cart.reduce((acc, i) => {
@@ -408,6 +414,16 @@ function renderProdutos() {
     grid.innerHTML = lista.map(cardHTML).join('');
     if (empty) empty.hidden = true;
   }
+
+  // Reanima a cascata de entrada dos cards a cada nova filtragem/ordenação
+  // (a primeira renderização fica a cargo do IntersectionObserver, que revela
+  // o grid apenas quando ele entra na viewport).
+  if (produtosRenderedOnce && !prefereMovimentoReduzido) {
+    grid.classList.remove('is-in');
+    void grid.offsetWidth; // força reflow para reiniciar a transição CSS
+    requestAnimationFrame(() => grid.classList.add('is-in'));
+  }
+  produtosRenderedOnce = true;
 }
 
 /* =========================================================
@@ -489,11 +505,13 @@ function initEventosVitrine() {
    CARROUSEL PRINCIPAL (HERO SLIDER)
    ========================================================= */
 function initHeroSlider() {
+  const slider = $('#heroSlider');
   const track = $('#sliderTrack');
   const dots = $$('.slider-dot');
   const prevBtn = $('#sliderPrev');
   const nextBtn = $('#sliderNext');
   const totalSlides = 3;
+  let pausado = false;
 
   function irParaSlide(index) {
     slideAtual = (index + totalSlides) % totalSlides;
@@ -507,8 +525,9 @@ function initHeroSlider() {
 
   function reiniciarTimer() {
     clearInterval(slideTimer);
+    if (prefereMovimentoReduzido) return; // usuário prefere sem autoplay
     slideTimer = setInterval(() => {
-      irParaSlide(slideAtual + 1);
+      if (!pausado && !document.hidden) irParaSlide(slideAtual + 1);
     }, 5500);
   }
 
@@ -533,6 +552,14 @@ function initHeroSlider() {
       irParaSlide(slideAtual + 1);
       reiniciarTimer();
     });
+  }
+
+  // Pausa o autoplay ao interagir com o slider (mouse ou teclado)
+  if (slider) {
+    slider.addEventListener('mouseenter', () => { pausado = true; });
+    slider.addEventListener('mouseleave', () => { pausado = false; });
+    slider.addEventListener('focusin', () => { pausado = true; });
+    slider.addEventListener('focusout', () => { pausado = false; });
   }
 
   // Iniciar timer automático
@@ -587,7 +614,13 @@ function atualizarDrawerCart() {
   badges.forEach(b => {
     b.textContent = count;
     b.hidden = count === 0;
+    if (count > cartCountAnterior && !prefereMovimentoReduzido) {
+      b.classList.remove('is-bump');
+      void b.offsetWidth;
+      b.classList.add('is-bump');
+    }
   });
+  cartCountAnterior = count;
 
   const totalHeader = $('#cartTotalHeader');
   if (totalHeader) totalHeader.textContent = brl(total);
@@ -604,7 +637,7 @@ function atualizarDrawerCart() {
         <div class="drawer-empty__icon">🛒</div>
         <h4>Seu orçamento está vazio</h4>
         <p>Navegue pelas ofertas da Ferragens Santa Rita, adicione os materiais que precisa e envie a lista pronta no WhatsApp com 1 clique.</p>
-        <button class="btn btn--primary btn--sm" onclick="fecharDrawer(); document.getElementById('produtos').scrollIntoView({behavior:'smooth'});">Explorar Ofertas</button>
+        <button class="btn btn--primary btn--sm" data-explore-products>Explorar Ofertas</button>
       </div>`;
   } else {
     drawerBody.innerHTML = cart.map(i => {
@@ -818,6 +851,14 @@ document.addEventListener('click', e => {
   }
   if (e.target.closest('#drawerClose') || e.target.closest('#drawerBackdrop')) {
     fecharDrawer();
+    return;
+  }
+
+  // Botão "Explorar Ofertas" dentro do orçamento vazio
+  if (e.target.closest('[data-explore-products]')) {
+    fecharDrawer();
+    const prodsSec = $('#produtos');
+    if (prodsSec) prodsSec.scrollIntoView({ behavior: 'smooth' });
     return;
   }
 
