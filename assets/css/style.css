@@ -1847,7 +1847,7 @@ h1, h2, h3, h4, h5, h6 {
    DEPOIMENTOS & PROVA SOCIAL
    ========================================================= */
 .reviews-section {
-  background: var(--dark-3);
+  background: var(--dark);
 }
 
 .reviews-grid {
@@ -1873,8 +1873,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .review-card__quote {
-  font-size: 0.9rem;
-  color: var(--dark-3);
+  font-size: 0.95rem;
+  color: var(--text-main);
   font-style: italic;
   margin-bottom: 16px;
   flex: 1;
