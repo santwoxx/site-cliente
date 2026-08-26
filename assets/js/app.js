@@ -30,6 +30,7 @@ const PRODUTOS = [
     apartir: true,
     unidade: 'und',
     cats: ['Ferragens', 'Portas & Telhas'],
+    foto: 'assets/img/produtos/porta-lisa-interna.jpg',
     icone: 'ic-door',
     selo: '-20% OFF',
     tipoSelo: 'sale',
@@ -47,6 +48,7 @@ const PRODUTOS = [
     apartir: false,
     unidade: 'und',
     cats: ['Ferragens', 'Portas & Telhas'],
+    foto: 'assets/img/produtos/porta-aluminio-branca.jpg',
     icone: 'ic-door',
     selo: 'DESTAQUE',
     tipoSelo: 'tag',
@@ -64,6 +66,7 @@ const PRODUTOS = [
     apartir: false,
     unidade: 'und',
     cats: ['Ferramentas'],
+    foto: 'assets/img/produtos/escada-aluminio-7.jpg',
     icone: 'ic-ladder',
     selo: 'MAIS VENDIDO',
     tipoSelo: 'hot',
@@ -81,6 +84,7 @@ const PRODUTOS = [
     apartir: false,
     unidade: 'und',
     cats: ['Hidráulicos', 'Elétricos'],
+    foto: 'assets/img/produtos/bomba-periferica-1-2hp.jpg',
     icone: 'ic-pump',
     selo: 'OFERTA DO DIA',
     tipoSelo: 'sale',
@@ -98,6 +102,7 @@ const PRODUTOS = [
     apartir: false,
     unidade: 'und',
     cats: ['Elétricos', 'Hidráulicos'],
+    foto: 'assets/img/produtos/ducha-lorenzetti-topjet.jpg',
     icone: 'ic-shower',
     selo: '-17% OFF',
     tipoSelo: 'sale',
@@ -115,6 +120,7 @@ const PRODUTOS = [
     apartir: false,
     unidade: 'und',
     cats: ['Elétricos', 'Hidráulicos'],
+    foto: 'assets/img/produtos/ducha-zagonel-ss.jpg',
     icone: 'ic-shower',
     selo: 'IMPERDÍVEL',
     tipoSelo: 'hot',
@@ -132,6 +138,7 @@ const PRODUTOS = [
     apartir: false,
     unidade: 'kit',
     cats: ['Hidráulicos'],
+    foto: 'assets/img/produtos/vaso-luzarte-acoplado.jpg',
     icone: 'ic-toilet',
     selo: 'ECONOMIA',
     tipoSelo: 'tag',
@@ -149,6 +156,7 @@ const PRODUTOS = [
     apartir: false,
     unidade: 'und',
     cats: ['Ferragens', 'Portas & Telhas'],
+    foto: 'assets/img/produtos/folha-eternit-telha.jpg',
     icone: 'ic-sheet',
     selo: 'PREÇO BAIXO',
     tipoSelo: 'sale',
@@ -166,6 +174,7 @@ const PRODUTOS = [
     apartir: true,
     unidade: 'und',
     cats: ['Elétricos', 'Iluminação'],
+    foto: 'assets/img/produtos/lampada-led-glight.jpg',
     icone: 'ic-bulb',
     selo: 'SUPER OFERTA',
     tipoSelo: 'hot',
@@ -183,6 +192,7 @@ const PRODUTOS = [
     apartir: false,
     unidade: 'lata',
     cats: ['Tintas'],
+    foto: 'assets/img/produtos/tinta-coralar-18l.jpg',
     icone: 'ic-paint',
     selo: 'LÍDER DE VENDAS',
     tipoSelo: 'hot',
@@ -200,6 +210,7 @@ const PRODUTOS = [
     apartir: false,
     unidade: 'lata',
     cats: ['Tintas'],
+    foto: 'assets/img/produtos/tinta-hydrolux-15l.jpg',
     icone: 'ic-paint',
     selo: '-19% OFF',
     tipoSelo: 'sale',
@@ -217,6 +228,7 @@ const PRODUTOS = [
     apartir: false,
     unidade: 'und',
     cats: ['Ferramentas'],
+    foto: 'assets/img/produtos/furadeira-impacto-vonder.jpg',
     icone: 'ic-wrench',
     selo: 'NOVIDADE',
     tipoSelo: 'tag',
@@ -337,7 +349,7 @@ function cardHTML(p) {
     </button>
     
     <div class="prod-card__media" data-quick="${p.id}">
-      <svg class="prod-card__icon"><use href="#${p.icone}"/></svg>
+      <img class="prod-card__img" src="${p.foto || `assets/img/produtos/${p.id}.jpg`}" alt="${p.nome}" loading="lazy" onerror="this.onerror=null;this.replaceWith(document.createRange().createContextualFragment('<svg class=\\'prod-card__icon\\'><use href=\\'#${p.icone}\\'/></svg>'))">
     </div>
     
     <div class="prod-card__body">
@@ -647,7 +659,7 @@ function atualizarDrawerCart() {
       return `
       <div class="drawer-item" data-id="${p.id}">
         <div class="drawer-item__img">
-          <svg class="ic" style="width:28px;height:28px;"><use href="#${p.icone}"/></svg>
+          <img src="${p.foto || `assets/img/produtos/${p.id}.jpg`}" alt="${p.nome}" class="drawer-item__thumb" onerror="this.onerror=null;this.replaceWith(document.createRange().createContextualFragment('<svg class=\\'ic\\' style=\\'width:28px;height:28px;\\'><use href=\\'#${p.icone}\\'/></svg>'))">
         </div>
         <div class="drawer-item__info">
           <div class="drawer-item__name">${p.nome}</div>
@@ -723,7 +735,9 @@ function abrirQuickView(id) {
   const specs = $('#modalSpecs');
   const qtyEl = $('#modalQty');
 
-  if (media) media.innerHTML = `<svg class="ic"><use href="#${p.icone}"/></svg>`;
+  if (media) {
+    media.innerHTML = `<img src="${p.foto || `assets/img/produtos/${p.id}.jpg`}" alt="${p.nome}" class="modal-media__img" onerror="this.onerror=null;this.replaceWith(document.createRange().createContextualFragment('<svg class=\\'ic\\' style=\\'width:96px;height:96px;\\'><use href=\\'#${p.icone}\\'/></svg>'))">`;
+  }
   if (cat) cat.textContent = `${p.marca} • ${p.cats.join(' / ')}`;
   if (title) title.textContent = p.nome;
   if (price) price.innerHTML = `<sup>R$</sup>${brl(p.preco).replace('R$', '').trim()} <span>/ ${p.unidade}</span>`;
